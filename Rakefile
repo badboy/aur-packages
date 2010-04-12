@@ -108,7 +108,7 @@ package_dir :upload => :source do
   sf = source_file(@pkgname)
   fatal "source file not present" unless sf
 
-  echo "aurploader", sf
+  sh "aurploader", sf
 end
 
 desc 'Build package'
