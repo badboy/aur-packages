@@ -40,7 +40,7 @@ task :list do
 
       puts "%s (v%s)%s\n\t%s" % [pkg, ver, ood, url]
     else
-      puts "%s\n\tnot found in AUR"
+      puts "%s\n\tnot found in AUR" % pkg
     end
   end
 end
