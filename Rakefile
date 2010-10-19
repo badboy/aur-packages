@@ -1,4 +1,4 @@
-require '_utils/helpers'
+require File.join(File.dirname(__FILE__), '_utils/helpers')
 Dir['_utils/*.rake'].each { |f| require f }
 
 task :pkgname do
@@ -18,7 +18,7 @@ desc 'List project urls'
 task :list do
   Dir["*"].sort.each do |dir|
     next unless File.directory?(dir)
-    # ignore _task dir and others
+    # ignore _utils dir and others
     next if dir[0] == '_'
 
     pkgbuild = File.join(dir, 'PKGBUILD')
