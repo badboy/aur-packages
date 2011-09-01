@@ -16,10 +16,10 @@ build() {
   cd "$srcdir/i3-${pkgver}"
 
   install -Dm755 i3-wsbar \
-    ${pkgdir}/usr/bin/i3-wsbar || return 1
+    ${pkgdir}/usr/bin/i3-wsbar
 
   install -Dm644 i3-wsbar \
-    ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE || return 1
+    ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
 }
 
 # vim:set ts=2 sw=2 et:

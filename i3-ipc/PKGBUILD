@@ -22,13 +22,13 @@ build() {
   cd "$srcdir/"
 
   install -Dm755 i3-ipc \
-    ${pkgdir}/usr/bin/i3-ipc || return 1
+    ${pkgdir}/usr/bin/i3-ipc
 
   install -Dm644 i3-ipc.1 \
-    ${pkgdir}/usr/share/man/man1/i3-ipc.1 || return 1
+    ${pkgdir}/usr/share/man/man1/i3-ipc.1
 
   install -Dm644 LICENSE \
-    ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE || return 1
+    ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
 }
 
 # vim:set ts=2 sw=2 et:

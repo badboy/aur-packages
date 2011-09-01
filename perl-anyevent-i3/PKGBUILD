@@ -16,9 +16,9 @@ md5sums=('65c7860fa20224e738a6ca5c1d6168c1')
 build() {
   cd "$srcdir/${_cpanname}-${pkgver}"
   # install module in vendor directories.
-  PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor || return 1
-  make || return 1
-  make install DESTDIR="$pkgdir/" || return 1
+  PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
+  make
+  make install DESTDIR="$pkgdir/"
 }
 
 # vim:set ts=2 sw=2 et:

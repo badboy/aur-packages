@@ -18,10 +18,10 @@ md5sums=('f7c1b7584ebcde637479bf5aa321491f')
 build() {
   cd $srcdir/${_pkgname}-$pkgver
 
-  PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor || return 1
+  PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
 
-  make  || return 1
-  make install DESTDIR=$pkgdir || return 1
+  make
+  make install DESTDIR=$pkgdir
 
   find $pkgdir -name perllocal.pod -delete
   find $pkgdir -name .packlist -delete
