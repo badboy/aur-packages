@@ -113,12 +113,11 @@ end
 
 desc 'Build package'
 package_dir :build do
-  force = !!ENV['FORCE'] || !!ENV['force']
-  if force
-    sh "makepkg", "--force"
-  else
-    sh "makepkg"
-  end
+  args = []
+  args << '--force' if !!ENV['FORCE'] || !!ENV['force']
+  args << '--syncdeps' << '--rmdeps' if !!ENV['DEPS'] || !!ENV['deps']
+
+  sh "makepkg", *args
 end
 
 desc 'Clean up package directory'
