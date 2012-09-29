@@ -1,7 +1,7 @@
 # Maintainer: Jan-Erik Rediger <badboy at archlinux dot us>
 
-pkgname=python2-legit-git
-pkgver=20120325
+pkgname=legit-git
+pkgver=20120328
 pkgrel=1
 pkgdesc="Sexy Git CLI, Inspired by GitHub for Mac™."
 arch=('any')
