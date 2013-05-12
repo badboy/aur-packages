@@ -36,7 +36,7 @@ task :list do
       ver = "#{pkgver}-#{pkgrel}"
       ver << " \033[0;31m!\033[0m" if online_ver != ver
       ood = ''
-      ood = " \033[0;31mOUT OF DATE!\033[0m" if info['OutOfDate'] != '0'
+      ood = " \033[0;31mOUT OF DATE!\033[0m" if info['OutOfDate'] != 0
 
       puts "%s (v%s)%s\n\t%s" % [pkg, ver, ood, url]
     else

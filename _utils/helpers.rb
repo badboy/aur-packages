@@ -2,8 +2,8 @@ require 'json'
 require 'cgi'
 require 'open-uri'
 
-PKG_RPC_URL = "http://aur.archlinux.org/rpc.php?type=info&arg=%s"
-PKG_URL     = "http://aur.archlinux.org/packages.php?ID=%s"
+PKG_RPC_URL = "https://aur.archlinux.org/rpc.php?type=info&arg=%s"
+PKG_URL     = "https://aur.archlinux.org/packages.php?ID=%s"
 
 PKGEXT = IO.read('/etc/makepkg.conf')[/^PKGEXT='(.+)'$/, 1]
 SRCEXT = IO.read('/etc/makepkg.conf')[/^SRCEXT='(.+)'$/, 1]
