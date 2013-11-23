@@ -1,3 +1,8 @@
 src
 pkg
 *.tar.*
+i3-git/i3
+i3lock-git/i3lock
+i3status-git
+i3status
+legit-git/legit-git
