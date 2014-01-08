@@ -1,4 +1,6 @@
 # Maintainer: Alexander Baldeck <lex@tentriplenine.com>
+# Contributor: Jan-Erik Rediger <badboy at archlinux dot us>
+
 pkgname=charles
 pkgver=3.8
 pkgrel=1
