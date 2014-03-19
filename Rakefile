@@ -28,7 +28,7 @@ task :list do
     pkg = pkgbuild_content[/pkgname=(.+)$/, 1]
     info = get_package_info(pkg)
 
-    if info
+    if info && !info.empty?
       url = PKG_URL % info['ID']
       online_ver = info['Version']
       pkgver = pkgbuild_content[/pkgver=(.+)$/, 1]
