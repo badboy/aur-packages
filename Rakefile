@@ -95,7 +95,7 @@ end
 
 desc 'Generate a source-only tarball without downloaded sources'
 package_dir :source do
-  force = !!ENV['FORCE'] || !!ENV['force']
+  force = !!ENV['FORCE'] || !!ENV['force'] || !!ENV['F']
   if force
     sh "makepkg", "--source", "--force"
   else
@@ -114,7 +114,7 @@ end
 desc 'Build package'
 package_dir :build do
   args = []
-  args << '--force' if !!ENV['FORCE'] || !!ENV['force']
+  args << '--force' if !!ENV['FORCE'] || !!ENV['force'] || !!ENV['F']
   args << '--syncdeps' << '--rmdeps' if !!ENV['DEPS'] || !!ENV['deps']
 
   sh "makepkg", *args
