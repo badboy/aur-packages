@@ -1,5 +1,5 @@
-# Maintainer: Alexander Baldeck <lex@tentriplenine.com>
-# Contributor: Jan-Erik Rediger <badboy at archlinux dot us>
+# Maintainer: Jan-Erik Rediger <badboy at archlinux dot us>
+# Contributor: Alexander Baldeck <lex@tentriplenine.com>
 
 pkgname=charles
 pkgver=3.9.2
