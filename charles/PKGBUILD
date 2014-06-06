@@ -4,7 +4,6 @@
 pkgname=charles
 pkgver=3.9.2
 pkgrel=2
-epoch=
 pkgdesc="Web debugging proxy application"
 arch=(any)
 url="http://www.charlesproxy.com"
