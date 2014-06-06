@@ -3,7 +3,7 @@
 pkgname=python2-args
 _pkgname=args
 pkgver=0.r37.36c727b
-pkgrel=1
+pkgrel=2
 pkgdesc="Command Arguments for Humans."
 arch=('any')
 url="https://pypi.python.org/pypi/args/"
