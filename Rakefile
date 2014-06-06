@@ -97,9 +97,9 @@ desc 'Generate a source-only tarball without downloaded sources'
 package_dir :source do
   force = !!ENV['FORCE'] || !!ENV['force'] || !!ENV['F']
   if force
-    sh "makepkg", "--source", "--force"
+    sh "mkaurball", "-f"
   else
-    sh "makepkg", "--source"
+    sh "mkaurball"
   end
 end
 
