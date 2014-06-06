@@ -7,8 +7,9 @@ pkgrel=1
 pkgdesc="Command Arguments for Humans."
 arch=('any')
 url="https://pypi.python.org/pypi/args/"
-license=('custom:isc')
+license=('BSD')
 depends=('python2')
+makedepends=('python2-setuptools')
 source=("$pkgname::git+https://github.com/kennethreitz/args")
 md5sums=('SKIP')
 
