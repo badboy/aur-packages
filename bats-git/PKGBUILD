@@ -1,6 +1,6 @@
 # Maintainer: Jan-Erik Rediger <badboy at archlinux dot us>
 
-pkgname="bats-git"
+pkgname=bats-git
 pkgver=v0.3.1.17.g2476770
 pkgrel=1
 pkgdesc="Bash Automated Testing System"
