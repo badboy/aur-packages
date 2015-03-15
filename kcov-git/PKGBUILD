@@ -1,0 +1,42 @@
+# Maintainer: Thomas Burdick <thomas.burdick@gmail.com>
+# Contributor: Jan-Erik Rediger <badboy at archlinux dot us>
+
+pkgname=kcov-git
+pkgver=v25.r77.g286d27e
+pkgrel=1
+pkgdesc="C code coverage tool which uses debug symbols"
+arch=('i686' 'x86_64')
+url="http://simonkagstrom.github.com/kcov/index.html"
+license=('GPL2')
+groups=('i3-vcs')
+depends=('elfutils' 'curl' 'python2')
+makedepends=('cmake')
+source=('git+http://github.com/SimonKagstrom/kcov')
+sha1sums=('SKIP')
+
+_gitname="kcov"
+
+pkgver() {
+  cd "$srcdir/$_gitname"
+  git describe --long | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+build() {
+  cd "$_gitname"
+
+  sed -i 's/env python/env python2/' src/bin-to-c-source.py
+  sed -i 's/env python/env python2/' src/engines/python-helper.py
+  sed -i 's#usr/bin/python#usr/bin/python2#' src/kcov-merge
+
+  cmake -DCMAKE_INSTALL_PREFIX=/usr .
+  make
+}
+
+package() {
+  cd "$_gitname"
+
+  make DESTDIR="$pkgdir/" install
+  make clean
+}
+
+# vim:set ts=2 sw=2 et:
