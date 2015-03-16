@@ -1,5 +1,4 @@
-# Maintainer: Thomas Burdick <thomas.burdick@gmail.com>
-# Contributor: Jan-Erik Rediger <badboy at archlinux dot us>
+# Maintainer: Jan-Erik Rediger <badboy at archlinux dot us>
 
 pkgname=kcov-git
 pkgver=v25.r77.g286d27e
