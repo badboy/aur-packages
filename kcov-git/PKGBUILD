@@ -3,7 +3,7 @@
 pkgname=kcov-git
 pkgver=v25.r77.g286d27e
 pkgrel=1
-pkgdesc="C code coverage tool which uses debug symbols"
+pkgdesc="Code coverage tester for compiled programs, Python scripts and shell scripts"
 arch=('i686' 'x86_64')
 url="http://simonkagstrom.github.com/kcov/index.html"
 license=('GPL2')
