@@ -1,7 +1,7 @@
 # Maintainer: Jan-Erik Rediger <badboy at archlinux dot us>
 
 pkgname=kcov-git
-pkgver=v25.r77.g286d27e
+pkgver=v26.r1.g4e4c432
 pkgrel=1
 pkgdesc="Code coverage tester for compiled programs, Python scripts and shell scripts"
 arch=('i686' 'x86_64')
