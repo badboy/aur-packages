@@ -2,10 +2,12 @@
 
 pkgname=kcov-git
 pkgver=v26.r1.g4e4c432
-pkgrel=1
+pkgrel=2
 pkgdesc="Code coverage tester for compiled programs, Python scripts and shell scripts"
 arch=('i686' 'x86_64')
 url="http://simonkagstrom.github.com/kcov/index.html"
+provides=('kcov')
+conflicts=('kcov')
 license=('GPL2')
 groups=('i3-vcs')
 depends=('elfutils' 'curl' 'python2')
