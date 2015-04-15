@@ -1,8 +1,8 @@
 # Maintainer: Jan-Erik Rediger <badboy at archlinux dot us>
 
 pkgname=sync-my-l2p
-pkgver=0.2.0
-pkgrel=2
+pkgver=2.0.0
+pkgrel=1
 pkgdesc="Sync the L2P of the RWTH Aachen with your Computer"
 arch=('i686' 'x86_64')
 url="http://www.sync-my-l2p.de/"
