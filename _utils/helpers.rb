@@ -57,3 +57,23 @@ end
 def fatal(msg)
   abort "FATAL: #{msg}"
 end
+
+
+def get_yes_no msg="Ok?"
+  print msg, " [Y/n] "
+  yes_no = $stdin.gets
+
+  if !yes_no.nil? && yes_no.chomp.downcase == "n"
+    false
+  else
+    true
+  end
+end
+
+def get_yes_no_abort msg="Ok?"
+  if !get_yes_no(msg)
+    puts "Aborting"
+    exit
+  end
+  true
+end

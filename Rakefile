@@ -93,22 +93,48 @@ package_dir :namcap do
 end
 
 
-desc 'Generate a source-only tarball without downloaded sources'
+desc 'Generate a source info file'
 package_dir :source do
-  force = !!ENV['FORCE'] || !!ENV['force'] || !!ENV['F']
-  if force
-    sh "makepkg", "--source", "-f"
-  else
-    sh "makepkg", "--source"
-  end
+  sh "mksrcinfo"
 end
 
 desc 'Upload the source package to aur.archlinux.org'
-package_dir :upload => :source do
-  sf = source_file(@pkgname)
-  fatal "source file not present" unless sf
+package_dir :upload => [:build, :source] do
+  #sf = source_file(@pkgname)
+  #fatal "source file not present" unless sf
 
-  sh "aurploader", sf
+  root = File.dirname(__FILE__)
+  pkgdir = File.join(root, @pkgname)
+
+  Dir.chdir(pkgdir) do
+    sh "git add -u ."
+
+    puts "Files to be committed:"
+    sh "git status --short ."
+    output = `git status --short .`
+
+    is_modified = output =~ /^M |^A /
+
+    if !is_modified
+      puts "No files to commit. Aborting."
+      exit
+    end
+
+    yes_no = get_yes_no_abort "Ready to commit?"
+
+    print "Commit message: "
+    message = $stdin.gets
+    full_message = "[#{@pkgname}] #{message}"
+    puts "Full commit message will be: #{full_message}"
+    yes_no = get_yes_no_abort
+
+    sh "git", "commit", "-m", full_message
+  end
+
+  Dir.chdir(root) do
+    sh "git subtree push --prefix=#{@pkgname} aur-#{@pkgname} master"
+    sh "git push origin master"
+  end
 end
 
 desc 'Build package'
