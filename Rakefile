@@ -113,7 +113,7 @@ package_dir :upload => [:build, :source] do
     sh "git status --short ."
     output = `git status --short .`
 
-    is_modified = output =~ /^M |^A /
+    is_modified = output =~ /^M |^A |^D /
 
     if !is_modified
       puts "No files to commit. Aborting."
