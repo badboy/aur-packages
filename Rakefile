@@ -34,9 +34,13 @@ task :list do
       pkgver = pkgbuild_content[/pkgver=(.+)$/, 1]
       pkgrel = pkgbuild_content[/pkgrel=(.+)$/, 1]
       ver = "#{pkgver}-#{pkgrel}"
-      ver << " \033[0;31m!\033[0m" if online_ver != ver
+      if online_ver != ver
+        ver << " \033[0;31m!\033[0m"
+      end
       ood = ''
-      ood = " \033[0;31mOUT OF DATE!\033[0m" if info['OutOfDate'] != 0
+      if !info['OutOfDate'].nil?
+        ood = " \033[0;31mOUT OF DATE!\033[0m"
+      end
 
       puts "%s (v%s)%s\n\t%s" % [pkg, ver, ood, url]
     else
