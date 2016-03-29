@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = ssh+git://aur@aur4.archlinux.org/i3lock-git.git
+	branch = master
+	commit = 6b68ead8049b0de4f48f724a71ade1112c5aee95
+	parent = 9c342ac32f8dc2430e07408533bced8fa4f95fed
+	cmdver = 0.3.0
