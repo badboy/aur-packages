@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = ssh+git://aur@aur4.archlinux.org/charles.git
+	branch = master
+	commit = eb7e81d78fcf9d557413933201841c5319d12087
+	parent = 46a381014ca4d7444577ad002dfaba866657305c
+	cmdver = 0.3.0
