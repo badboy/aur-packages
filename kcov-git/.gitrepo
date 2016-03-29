@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = ssh+git://aur@aur4.archlinux.org/kcov-git.git
+	branch = master
+	commit = b57fd5d69682d28624a58de55f33c58c3fbd9be4
+	parent = 49b613a7823dd0b66de10f92fb421ed25bac761e
+	cmdver = 0.3.0
