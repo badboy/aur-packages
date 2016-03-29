@@ -136,7 +136,7 @@ package_dir :upload => [:build, :source] do
   end
 
   Dir.chdir(root) do
-    sh "git subtree push --prefix=#{@pkgname} aur-#{@pkgname} master"
+    sh "git subrepo push #{@pkgname}"
     sh "git push origin master"
   end
 end
