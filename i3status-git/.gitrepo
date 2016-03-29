@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = ssh+git://aur@aur4.archlinux.org/i3status-git.git
+	branch = master
+	commit = 35148ec48f8dbe375055f82d8ba569e2e35e7dff
+	parent = 496fba246c1de70343a896341bd39d5ff459c713
+	cmdver = 0.3.0
