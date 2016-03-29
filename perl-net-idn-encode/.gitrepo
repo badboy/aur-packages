@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = ssh+git://aur@aur4.archlinux.org/perl-net-idn-encode.git
+	branch = master
+	commit = 3471a9590458d2fd9b313a3cf63a2a744cdb5b15
+	parent = 51f9a7a276bbcdea77ad45043eb15eeb11cbbf86
+	cmdver = 0.3.0
