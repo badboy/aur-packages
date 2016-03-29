@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = ssh+git://aur@aur4.archlinux.org/kanla.git
+	branch = master
+	commit = a491dac265b4cbb7c354781c8364cb5c391ca296
+	parent = c03e6bf236fb7c74884a32e0e22bbb73c062e87c
+	cmdver = 0.3.0
