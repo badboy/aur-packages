@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = ssh+git://aur@aur4.archlinux.org/sync-my-l2p.git
+	branch = master
+	commit = c7297dd31760576b577b18efcead35909ccce9bf
+	parent = cec482bdfdb3e9ba0ccd470d0e6927f1518e1360
+	cmdver = 0.3.0
