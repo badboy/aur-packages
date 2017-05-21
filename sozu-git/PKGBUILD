@@ -7,9 +7,15 @@ pkgdesc="HTTP reverse proxy, configurable at runtime, fast and safe, built in Ru
 arch=('i686' 'x86_64')
 url="https://github.com/sozu-proxy/sozu"
 license=('GPL')
+depends=('openssl>=1.0.1')
 makedepends=('cargo')
-source=('git://github.com/sozu-proxy/sozu')
-sha1sums=('SKIP')
+backup=('etc/sozu/config.toml')
+source=(
+  'git://github.com/sozu-proxy/sozu'
+  'config.toml'
+)
+sha1sums=('SKIP'
+          '4eb7a4cd136aea3f50e10d610661418342aa5177')
 
 _gitname='sozu'
 
@@ -35,6 +41,9 @@ package() {
 
   install -Dm755 "target/release/sozu" "$pkgdir/usr/bin/sozu"
   install -Dm755 "target/release/sozuctl" "$pkgdir/usr/bin/sozuctl"
+
+  install -Dm644 "$srcdir/config.toml" "$pkgdir/etc/sozu/config.toml"
+  install -d "$pkgdir/var/lib/sozu"
 
   install -Dm644 "README.md" "$pkgdir/usr/share/doc/${pkgname}/README.md"
   install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/${pkgname}/LICENSE-MIT"
