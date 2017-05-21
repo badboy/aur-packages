@@ -1,0 +1,43 @@
+# Maintainer: Jan-Erik Rediger <badboy at archlinux dot us>
+
+pkgname=sozu-git
+pkgver=0.1.1.r49.g73d32a4
+pkgrel=1
+pkgdesc="HTTP reverse proxy, configurable at runtime, fast and safe, built in Rust"
+arch=('i686' 'x86_64')
+url="https://github.com/sozu-proxy/sozu"
+license=('GPL')
+makedepends=('cargo')
+source=('git://github.com/sozu-proxy/sozu')
+sha1sums=('SKIP')
+
+_gitname='sozu'
+
+pkgver() {
+  cd "$srcdir/$_gitname"
+  git describe --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+build() {
+  cd "$srcdir/$_gitname"
+
+  pushd ctl;
+  cargo build --release
+  popd
+
+  pushd bin
+  cargo build --release
+  popd
+}
+
+package() {
+  cd "$srcdir/$_gitname"
+
+  install -Dm755 "target/release/sozu" "$pkgdir/usr/bin/sozu"
+  install -Dm755 "target/release/sozuctl" "$pkgdir/usr/bin/sozuctl"
+
+  install -Dm644 "README.md" "$pkgdir/usr/share/doc/${pkgname}/README.md"
+  install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/${pkgname}/LICENSE-MIT"
+}
+
+# vim:set ts=2 sw=2 sts=2 et:
