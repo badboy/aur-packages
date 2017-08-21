@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = ssh://aur@aur.archlinux.org/sozu-git.git
+	branch = master
+	commit = 378ad323118c05a22d2d3963807fc2623e6078a9
+	parent = 88bc383c2179f7f00f5450dfd9ce53acd89c52de
+	cmdver = 0.3.0
