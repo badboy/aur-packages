@@ -27,15 +27,13 @@ package() {
       ${pkgdir}/usr/share/java/${pkgname}/$(basename ${fn})
   done
 
-  for dim in 16 32 48 64 128 256 512; do
-    install -D -m644 ${srcdir}/${pkgname}/icon/charles_icon${dim}.png \
+  for dim in 16 32 64 128 256 512; do
+    install -D -m644 ${srcdir}/${pkgname}/icon/${dim}x${dim}/apps/charles-proxy.png \
       ${pkgdir}/usr/share/icons/hicolor/${dim}x${dim}/apps/charles.png
   done
-  install -D -m644 ${srcdir}/${pkgname}/icon/charles_icon128.png \
+  install -D -m644 ${srcdir}/${pkgname}/icon/128x128/apps/charles-proxy.png \
     ${pkgdir}/usr/share/icons/charles128.png
 
-  install -D -m644 ${srcdir}/${pkgname}/icon/charles_icon.svg \
-    ${pkgdir}/usr/share/icons/hicolor/scalable/apps/charles.svg
   install -D -m644 ${srcdir}/${pkgname}/doc/licenses/bounce-license.txt \
     ${pkgdir}/usr/share/licenses/${pkgname}/bounce-license.txt
   install -D -m644 ${srcdir}/${pkgname}/etc/charles-proxy.desktop \
