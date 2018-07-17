@@ -4,7 +4,7 @@
 ; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
 ;
 [subrepo]
-	remote = ssh://aur@aur.archlinux.org/sozu-git.git
+	remote = ssh+git://aur@aur.archlinux.org/sozu-git.git
 	branch = master
 	commit = 378ad323118c05a22d2d3963807fc2623e6078a9
 	parent = 88bc383c2179f7f00f5450dfd9ce53acd89c52de

@@ -4,7 +4,7 @@
 ; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
 ;
 [subrepo]
-	remote = ssh+git://aur@aur4.archlinux.org/i3-git.git
+	remote = ssh+git://aur@aur.archlinux.org/i3-git.git
 	branch = master
 	commit = b4a73ad8e7c83eb94b1a02e0d8a21ffd7edec229
 	parent = e4fe42ba6cc4ce507f647ab21346cca388a16ccf
