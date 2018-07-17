@@ -6,8 +6,8 @@
 [subrepo]
 	remote = ssh+git://aur@aur.archlinux.org/charles.git
 	branch = master
-	commit = d8daa2043b1ce3781e5e66c82c89cd2c5bb50bf6
-	parent = b480e6e85301c9965a81e0a35ea3e2fab4c2cdad
+	commit = f09ccb79413f853683b48e41d38ebc38b321cff6
+	parent = 2b453a1634f69319d0fb7fdce8b9a7071a7865d6
 	method = merge
 	update = auto
 	cmdver = 0.4.1
