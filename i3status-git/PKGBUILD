@@ -1,4 +1,5 @@
 # Maintainer: Thorsten Töpper <atsutane-aur@freethoughts.de>
+# Co-Maintainer: Ingo Bürk <ingo.buerk@airblader.de>
 # Contributor: William Giokas <1007380@gmail.com>
 
 pkgname=i3status-git

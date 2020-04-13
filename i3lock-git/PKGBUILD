@@ -7,7 +7,7 @@ pkgver=2.12.r9.gf3b0612
 pkgrel=1
 pkgdesc="An improved screenlocker based upon XCB and PAM"
 arch=('i686' 'x86_64')
-url="http://i3wm.org/i3lock/"
+url="https://i3wm.org/i3lock/"
 license=('MIT')
 groups=('i3-vcs')
 provides=('i3lock')
@@ -16,14 +16,14 @@ depends=('xcb-util-image' 'libev' 'cairo' 'libxkbcommon-x11')
 backup=("etc/pam.d/i3lock")
 options=('docs')
 makedepends=('git')
-source=(git://code.i3wm.org/i3lock)
+source=('git://github.com/i3/i3lock#branch=master')
 sha1sums=('SKIP')
 
 _gitname='i3lock'
 
 pkgver() {
   cd "$srcdir/$_gitname"
-  git describe --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+  git describe --long | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare() {
